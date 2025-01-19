@@ -147,7 +147,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     opacity: 1,
                     x: 0,
                     y: 0,
-                    duration: 0.5,
+                    duration: 0.8,
                     delay: index * 0.1,
                     ease: "power2.out",
                     onComplete: () => {
