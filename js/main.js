@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", function () {
                         if (index === objects.length - 1) {
                             objects.forEach((element, i) => {
                                 element.classList.add("animate-deco");
-                                element.classList.add(`obj-deco${(i % 3) + 1}`);
+                                element.classList.add(`obj-deco${(i % 4) + 1}`);
                             });
                         }
                     },
