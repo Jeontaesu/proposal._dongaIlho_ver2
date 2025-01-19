@@ -120,10 +120,10 @@ window.addEventListener("DOMContentLoaded", function () {
     // 오브젝트 애니메이션 설정
     const objects = document.querySelectorAll(".sc__start .obj");
     const animations = [
-        { x: -100, y: 100 },
-        { x: 100, y: 100 },
-        { x: 0, y: 100 },
-        { x: -50, y: 100 },
+        { x: -200, y: 200 },
+        { x: 200, y: 200 },
+        { x: -200, y: 200 },
+        { x: -100, y: 200 },
     ];
 
     objects.forEach((obj, index) => {
@@ -147,8 +147,8 @@ window.addEventListener("DOMContentLoaded", function () {
                     opacity: 1,
                     x: 0,
                     y: 0,
-                    duration: 0.8,
-                    delay: index * 0.15,
+                    duration: 0.5,
+                    delay: index * 0.1,
                     ease: "power2.out",
                     onComplete: () => {
                         // 마지막 요소의 애니메이션이 완료된 후에만 데코 애니메이션 추가
