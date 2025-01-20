@@ -1754,6 +1754,7 @@ img.pc-part {
   color: #242424;
   font-weight: 700;
   line-height: 1;
+  font-family: "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .btn-more span {
   display: flex;
