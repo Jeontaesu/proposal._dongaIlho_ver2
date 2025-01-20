@@ -1724,9 +1724,6 @@ img.pc-part {
   display: block;
 }
 
-.sc__bg {
-  display: inline-flex;
-}
 .sc__bg img {
   width: 100%;
   height: auto;
@@ -1738,6 +1735,11 @@ img.pc-part {
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+.common__inner {
+  width: 1920px;
+  margin: 0 auto;
 }
 
 @keyframes deco {
@@ -1778,7 +1780,7 @@ img.pc-part {
     transform: translateX(0) rotate(0);
   }
   50% {
-    transform: translateX(-2%) rotate(-5deg);
+    transform: translateX(0) rotate(0);
   }
   100% {
     transform: translateX(0) rotate(0);
@@ -1822,7 +1824,7 @@ img.pc-part {
   top: 0;
   left: 0;
   right: 0;
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   z-index: 100;
   transition: all 0.3s;
@@ -1982,7 +1984,7 @@ img.pc-part {
 }
 
 #wrap {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1994,7 +1996,7 @@ img.pc-part {
   left: 0;
   right: 0;
   z-index: 1;
-  width: 1920px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 }
@@ -2054,10 +2056,20 @@ img.pc-part {
   /* sc__news */
   /* sc__partner */
 }
-.sc__start {
+.sc section {
   position: relative;
+}
+.sc section .sc__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.sc__start {
   overflow: hidden;
   width: 100%;
+  height: 1369px;
   z-index: 10;
 }
 .sc__start .sc__area-title {
@@ -2066,13 +2078,6 @@ img.pc-part {
   left: 50%;
   transform: translate(-50%, -68%);
   text-align: center;
-}
-.sc__start .sc__area-title .titleDeco img {
-  animation-name: deco3;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
 }
 .sc__start .sc__area-title .title {
   position: relative;
@@ -2111,7 +2116,7 @@ img.pc-part {
 }
 .sc__start .sc__area .obj3 {
   position: absolute;
-  left: 3%;
+  left: 1%;
   bottom: -6.3%;
   z-index: 1;
 }
@@ -2124,11 +2129,6 @@ img.pc-part {
   position: absolute;
   left: 3%;
   top: 43%;
-  animation-name: deco;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
 }
 .sc__start .sc__area .deco2 {
   position: absolute;
@@ -2164,25 +2164,12 @@ img.pc-part {
   position: absolute;
   right: 25%;
   bottom: 14%;
-  animation-name: deco;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
 }
 .sc__business {
-  position: relative;
   width: 100%;
+  height: 1258px;
+  margin-top: -14vh;
   z-index: 10;
-}
-.sc__business:before {
-  content: "";
-  position: absolute;
-  top: -192px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/bg3.png) center no-repeat;
 }
 .sc__business .sc__area-title {
   margin-top: 326px;
@@ -2245,17 +2232,11 @@ img.pc-part {
   animation-iteration-count: infinite;
 }
 .sc__backup {
-  position: relative;
   z-index: 10;
+  height: 2500px;
 }
-.sc__backup:before {
-  content: "";
-  position: absolute;
-  top: -180px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/bg4.png) center no-repeat;
+.sc__backup .sc__bg {
+  top: -6% !important;
 }
 .sc__backup .backup__list {
   position: absolute;
@@ -2263,7 +2244,7 @@ img.pc-part {
   left: 0;
   right: 0;
   bottom: 0;
-  padding-top: 260px;
+  padding-top: 330px;
   width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -2489,27 +2470,8 @@ img.pc-part {
   bottom: 20%;
 }
 .sc__news {
-  position: relative;
   z-index: 10;
-}
-.sc__news:before {
-  content: "";
-  position: absolute;
-  top: -230px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/bg5.png) center no-repeat;
-}
-.sc__news:after {
-  content: "";
-  position: absolute;
-  bottom: -49px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/bg5.png) center no-repeat;
-  z-index: -1;
+  height: 1634px;
 }
 .sc__news .sc__area {
   z-index: 10;
@@ -2608,8 +2570,8 @@ img.pc-part {
 }
 .sc__partner {
   padding: 140px 0;
-  position: relative;
   z-index: 10;
+  height: 550px;
   background: #fff;
 }
 .sc__partner .inner {

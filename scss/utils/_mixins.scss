@@ -1,79 +1,79 @@
 @mixin keyframes($name) {
-    @keyframes #{$name} {
-        @content;
-    }
+  @keyframes #{$name} {
+    @content;
+  }
 }
 
 @mixin animation($keyframe-name, $duration, $delay, $steps: 1, $direction: end, $count: infinite) {
-    animation-name: #{$keyframe-name};
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-timing-function: steps($steps, $direction);
-    animation-iteration-count: $count;
+  animation-name: #{$keyframe-name};
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-timing-function: steps($steps, $direction);
+  animation-iteration-count: $count;
 }
 
 @include keyframes(deco) {
-    0% {
-        transform: translateX(0) rotate(0);
-    }
-    50% {
-        transform: translateX(10%) rotate(20deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0);
-    }
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10%) rotate(20deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 @include keyframes(deco2) {
-    0% {
-        transform: translateX(0) rotate(0);
-    }
-    50% {
-        transform: translateX(10%) rotate(-10deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0);
-    }
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10%) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 @include keyframes(deco3) {
-    0% {
-        transform: translateX(0) rotate(0);
-    }
-    50% {
-        transform: translateX(5%) rotate(-5deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0);
-    }
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(5%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 @include keyframes(deco4) {
-    0% {
-        transform: translateX(0) rotate(0);
-    }
-    50% {
-        transform: translateX(-2%) rotate(-5deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0);
-    }
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(0) rotate(0);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 .animate-deco {
-    will-change: transform;
-    &.obj-deco1 {
-        @include animation(deco, 1s, 0.4s, 1);
-    }
+  will-change: transform;
+  &.obj-deco1 {
+    @include animation(deco, 1s, 0.4s, 1);
+  }
 
-    &.obj-deco2 {
-        @include animation(deco2, 1s, 0.5s, 1);
-    }
+  &.obj-deco2 {
+    @include animation(deco2, 1s, 0.5s, 1);
+  }
 
-    &.obj-deco3 {
-        @include animation(deco3, 1s, 0.8s, 1);
-    }
-    &.obj-deco4 {
-        @include animation(deco4, 1s, 0.8s, 1);
-    }
+  &.obj-deco3 {
+    @include animation(deco3, 1s, 0.8s, 1);
+  }
+  &.obj-deco4 {
+    @include animation(deco4, 1s, 0.8s, 1);
+  }
 }

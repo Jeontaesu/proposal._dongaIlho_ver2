@@ -1,5 +1,5 @@
 #wrap {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   z-index: 1;
-  width: 1920px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   &.--static {
@@ -57,11 +57,21 @@
 .sc {
   position: relative;
   margin-top: 100vh;
+  section {
+    position: relative;
+    .sc__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
   /* sc__start */
   &__start {
-    position: relative;
     overflow: hidden;
     width: 100%;
+    height: 1369px;
     z-index: 10;
     .sc__area {
       &-title {
@@ -70,11 +80,7 @@
         left: 50%;
         transform: translate(-50%, -68%);
         text-align: center;
-        .titleDeco {
-          img {
-            @include animation(deco3, 1s, 0s, 1);
-          }
-        }
+
         .title {
           position: relative;
           margin-top: 32px;
@@ -118,7 +124,7 @@
       }
       .obj3 {
         position: absolute;
-        left: 3%;
+        left: 1%;
         bottom: -6.3%;
         z-index: 1;
         // @include animation(deco, 1s, 0s, 1);
@@ -133,7 +139,7 @@
         position: absolute;
         left: 3%;
         top: 43%;
-        @include animation(deco, 1s, 0s, 1);
+        // @include animation(deco, 1s, 0s, 1);
       }
       .deco2 {
         position: absolute;
@@ -157,26 +163,26 @@
         position: absolute;
         right: 25%;
         bottom: 14%;
-        @include animation(deco, 1s, 0s, 1);
+        // @include animation(deco, 1s, 0s, 1);
       }
     }
   }
   /* sc__business */
   &__business {
-    position: relative;
     width: 100%;
+    height: 1258px;
+    margin-top: -14vh;
     // overflow: hidden;
-    // transform: translateY(-18%);
     z-index: 10;
-    &:before {
-      content: "";
-      position: absolute;
-      top: -192px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../images/bg3.png) center no-repeat;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -192px;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: url(../images/bg3.png) center no-repeat;
+    // }
     .sc__area {
       &-title {
         margin-top: 326px;
@@ -233,18 +239,21 @@
   }
   /* sc__backup */
   &__backup {
-    position: relative;
     // overflow: hidden;
     z-index: 10;
+    height: 2500px;
     // transform: translateY(-14%);
-    &:before {
-      content: "";
-      position: absolute;
-      top: -180px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../images/bg4.png) center no-repeat;
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -180px;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: url(../images/bg4.png) center no-repeat;
+    // }
+    .sc__bg {
+      top: -6% !important;
     }
     .backup__list {
       position: absolute;
@@ -252,7 +261,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding-top: 260px;
+      padding-top: 330px;
       width: 1440px;
       margin: 0 auto;
       display: flex;
@@ -447,29 +456,29 @@
   }
   /* sc__news */
   &__news {
-    position: relative;
     // overflow: hidden;
     z-index: 10;
+    height: 1634px;
     // transform: translateY(-70%);
-    &:before {
-      content: "";
-      position: absolute;
-      top: -230px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../images/bg5.png) center no-repeat;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -49px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url(../images/bg5.png) center no-repeat;
-      z-index: -1;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -230px;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: url(../images/bg5.png) center no-repeat;
+    // }
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: -49px;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: url(../images/bg5.png) center no-repeat;
+    //   z-index: -1;
+    // }
     .sc__area {
       z-index: 10;
       .sc__news-title {
@@ -584,8 +593,8 @@
   /* sc__partner */
   &__partner {
     padding: 140px 0;
-    position: relative;
     z-index: 10;
+    height: 550px;
     background: #fff;
     .inner {
       width: 1600px;
