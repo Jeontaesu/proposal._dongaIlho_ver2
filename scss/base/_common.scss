@@ -28,3 +28,30 @@
   width: 1920px;
   margin: 0 auto;
 }
+
+//버튼_자세히 보기
+.btn-more {
+  margin-top: 54px;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 64px;
+  padding: 0 40px;
+  border-radius: 500px;
+  font-size: 24px;
+  color: #242424;
+  font-weight: 700;
+  line-height: 1;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 39px;
+      height: 25px;
+      background: url(../images/arrow2.png) center no-repeat;
+    }
+  }
+}

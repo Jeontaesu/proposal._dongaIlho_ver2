@@ -1742,6 +1742,32 @@ img.pc-part {
   margin: 0 auto;
 }
 
+.btn-more {
+  margin-top: 54px;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  height: 64px;
+  padding: 0 40px;
+  border-radius: 500px;
+  font-size: 24px;
+  color: #242424;
+  font-weight: 700;
+  line-height: 1;
+}
+.btn-more span {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.btn-more span::after {
+  content: "";
+  display: inline-block;
+  width: 39px;
+  height: 25px;
+  background: url(../images/arrow2.png) center no-repeat;
+}
+
 @keyframes deco {
   0% {
     transform: translateX(0) rotate(0);
@@ -2117,13 +2143,13 @@ img.pc-part {
 .sc__start .sc__area .obj3 {
   position: absolute;
   left: 1%;
-  bottom: -6.3%;
+  bottom: -12%;
   z-index: 1;
 }
 .sc__start .sc__area .obj4 {
   position: absolute;
-  left: -13%;
-  bottom: -20%;
+  left: -16%;
+  bottom: -28%;
 }
 .sc__start .sc__area .deco1 {
   position: absolute;
@@ -2439,31 +2465,6 @@ img.pc-part {
   line-height: 46px;
   color: #000;
 }
-.sc__backup .backup__list .backup__item .memo .btn-more {
-  margin-top: 54px;
-  display: inline-flex;
-  align-items: center;
-  align-self: flex-start;
-  height: 64px;
-  padding: 0 40px;
-  border-radius: 500px;
-  font-size: 24px;
-  color: #242424;
-  font-weight: 700;
-  line-height: 1;
-}
-.sc__backup .backup__list .backup__item .memo .btn-more span {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.sc__backup .backup__list .backup__item .memo .btn-more span::after {
-  content: "";
-  display: inline-block;
-  width: 39px;
-  height: 25px;
-  background: url(../images/arrow2.png) center no-repeat;
-}
 .sc__backup .backup__list .backup__item .deco {
   position: absolute;
   right: 11%;
@@ -2567,6 +2568,14 @@ img.pc-part {
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+.sc__news .sc__area .btn-more {
+  margin-top: 0;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffc258;
 }
 .sc__partner {
   padding: 140px 0;

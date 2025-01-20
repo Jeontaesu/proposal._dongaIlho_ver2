@@ -80,7 +80,6 @@
         left: 50%;
         transform: translate(-50%, -68%);
         text-align: center;
-
         .title {
           position: relative;
           margin-top: 32px;
@@ -125,14 +124,14 @@
       .obj3 {
         position: absolute;
         left: 1%;
-        bottom: -6.3%;
+        bottom: -12%;
         z-index: 1;
         // @include animation(deco, 1s, 0s, 1);
       }
       .obj4 {
         position: absolute;
-        left: -13%;
-        bottom: -20%;
+        left: -16%;
+        bottom: -28%;
         // @include animation(deco3, 1s, 0s, 1);
       }
       .deco1 {
@@ -420,31 +419,6 @@
             line-height: 46px;
             color: #000;
           }
-          .btn-more {
-            margin-top: 54px;
-            display: inline-flex;
-            align-items: center;
-            align-self: flex-start;
-            height: 64px;
-            padding: 0 40px;
-            border-radius: 500px;
-            font-size: 24px;
-            color: #242424;
-            font-weight: 700;
-            line-height: 1;
-            span {
-              display: flex;
-              align-items: center;
-              gap: 24px;
-              &::after {
-                content: "";
-                display: inline-block;
-                width: 39px;
-                height: 25px;
-                background: url(../images/arrow2.png) center no-repeat;
-              }
-            }
-          }
         }
         .deco {
           position: absolute;
@@ -587,6 +561,14 @@
             -webkit-line-clamp: 2;
           }
         }
+      }
+      .btn-more {
+        margin-top: 0;
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffc258;
       }
     }
   }
