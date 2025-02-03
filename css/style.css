@@ -2118,8 +2118,8 @@ img.pc-part {
 .sc__start .sc__area-title .title:before {
   content: "";
   position: absolute;
-  top: -20%;
-  left: 25%;
+  top: -12%;
+  left: 33%;
   width: 67px;
   height: 26px;
   background: url(../images/title_deco.png) center no-repeat;
@@ -2215,7 +2215,7 @@ img.pc-part {
 .sc__business .sc__area-title .desc .bg {
   display: inline-block;
   background: #fff;
-  width: 397px;
+  padding: 0 16px;
   color: #000;
 }
 .sc__business .sc__area .deco1 {
