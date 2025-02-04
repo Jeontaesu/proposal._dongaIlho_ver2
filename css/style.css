@@ -2140,11 +2140,12 @@ img.pc-part {
   position: absolute;
   right: -10%;
   bottom: -2%;
+  z-index: 1;
 }
 .sc__start .sc__area .obj3 {
   position: absolute;
-  left: 1%;
-  bottom: -12%;
+  left: -3%;
+  bottom: -9%;
   z-index: 1;
 }
 .sc__start .sc__area .obj4 {
@@ -2154,38 +2155,23 @@ img.pc-part {
 }
 .sc__start .sc__area .deco1 {
   position: absolute;
-  left: 3%;
-  top: 43%;
+  left: 64%;
+  top: 60%;
 }
 .sc__start .sc__area .deco2 {
   position: absolute;
-  left: 36%;
-  top: 15%;
-  animation-name: deco2;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
+  left: 16%;
+  top: 31%;
 }
 .sc__start .sc__area .deco3 {
   position: absolute;
   right: 25%;
   top: 18%;
-  animation-name: deco;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
 }
 .sc__start .sc__area .deco4 {
   position: absolute;
   right: 0px;
   top: 15%;
-  animation-name: deco2;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: steps(1, end);
-  animation-iteration-count: infinite;
 }
 .sc__start .sc__area .deco5 {
   position: absolute;

@@ -119,12 +119,13 @@
         position: absolute;
         right: -10%;
         bottom: -2%;
+        z-index: 1;
         // @include animation(deco2, 1s, 0s, 1);
       }
       .obj3 {
         position: absolute;
-        left: 1%;
-        bottom: -12%;
+        left: -3%;
+        bottom: -9%;
         z-index: 1;
         // @include animation(deco, 1s, 0s, 1);
       }
@@ -136,27 +137,27 @@
       }
       .deco1 {
         position: absolute;
-        left: 3%;
-        top: 43%;
+        left: 64%;
+        top: 60%;
         // @include animation(deco, 1s, 0s, 1);
       }
       .deco2 {
         position: absolute;
-        left: 36%;
-        top: 15%;
-        @include animation(deco2, 1s, 0s, 1);
+        left: 16%;
+        top: 31%;
+        // @include animation(deco2, 1s, 0s, 1);
       }
       .deco3 {
         position: absolute;
         right: 25%;
         top: 18%;
-        @include animation(deco, 1s, 0s, 1);
+        // @include animation(deco, 1s, 0s, 1);
       }
       .deco4 {
         position: absolute;
         right: 0px;
         top: 15%;
-        @include animation(deco2, 1s, 0s, 1);
+        // @include animation(deco2, 1s, 0s, 1);
       }
       .deco5 {
         position: absolute;
