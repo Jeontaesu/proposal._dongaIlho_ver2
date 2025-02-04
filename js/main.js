@@ -34,14 +34,14 @@ window.addEventListener("DOMContentLoaded", function () {
       start: "top 70%",
       end: "bottom 20%",
       yPercent: 100,
-      markerId: "start-animation",
+      markerId: "startAnimation",
     },
     {
       trigger: ".sc__business .sc__area-title",
-      start: "600% 600%",
-      end: "100% 100%",
+      start: "-150% 0%",
+      end: "-100% 0%",
       yPercent: 100,
-      markerId: "business-animation",
+      markerId: "businessAnimation",
     },
     // {
     //     trigger: ".sc__backup .backup__item",
@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function () {
       start: "-50% 50%",
       end: "100% 50%",
       yPercent: 100,
-      markerId: "news-animation",
+      markerId: "newsAnimation",
     },
     // {
     //     trigger: ".sc__partner .inner > *",
@@ -67,25 +67,46 @@ window.addEventListener("DOMContentLoaded", function () {
   ];
 
   scrollAnimations.forEach(({ trigger, start, end, yPercent, markerId }) => {
-    gsap.from(trigger, {
-      scrollTrigger: {
-        trigger,
-        start,
-        end,
-        scrub: 2,
-        toggleActions: "play none none reverse",
-        id: markerId, // 마커 식별을 위한 ID
-        // 마커 커스텀
-        markerStart: "Start " + markerId,
-        markerEnd: "End " + markerId,
-        markerSnapRatio: 0.5,
-      },
-      opacity: 0,
-      stagger: 0.2,
-      yPercent,
-      duration: 1.5,
-      ease: "power2.out",
-    });
+    if (markerId === "businessAnimation") {
+      gsap.from(trigger, {
+        scrollTrigger: {
+          trigger,
+          start,
+          end,
+          scrub: 2,
+          toggleActions: "play none none reverse",
+          id: "businessAnimation", // 고유 ID 적용
+          markerStart: "Start businessAnimation",
+          markerEnd: "End businessAnimation",
+          markerSnapRatio: 0.5,
+        },
+        opacity: 0,
+        stagger: 0.2,
+        yPercent,
+        duration: 1.5,
+        ease: "power2.out",
+      });
+    } else {
+      // 다른 애니메이션들은 기존 방식대로 처리
+      gsap.from(trigger, {
+        scrollTrigger: {
+          trigger,
+          start,
+          end,
+          scrub: 2,
+          toggleActions: "play none none reverse",
+          id: markerId,
+          markerStart: "Start " + markerId,
+          markerEnd: "End " + markerId,
+          markerSnapRatio: 0.5,
+        },
+        opacity: 0,
+        stagger: 0.2,
+        yPercent,
+        duration: 1.5,
+        ease: "power2.out",
+      });
+    }
   });
 
   // 슬라이드업 애니메이션
@@ -94,7 +115,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const trigger = ScrollTrigger.create({
       trigger: element,
       start: "top 60%",
-      end: "bottom 20%",
+      end: "bottom 10%",
       onEnter: () => toggleClass(element, true),
       onLeaveBack: () => toggleClass(element, false),
     });
