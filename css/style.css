@@ -1924,7 +1924,6 @@ img.pc-part {
   overflow: hidden;
   z-index: 10;
   padding: 0 24px;
-  background: url(../../images/bg6.png) center no-repeat;
 }
 .footer::before {
   content: "";
@@ -2586,18 +2585,20 @@ img.pc-part {
 }
 .sc__partner {
   z-index: 10;
-  height: 600px;
+  height: 750px;
 }
 .sc__partner .sc__bg img {
   margin-top: -5.5%;
 }
 .sc__partner .inner {
-  padding: 160px 0;
+  padding: 140px 0;
   width: 1600px;
+  height: 100%;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 64px;
+  gap: 70px;
 }
 .sc__partner .title__wrap {
   opacity: 0;

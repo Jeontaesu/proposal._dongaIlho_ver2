@@ -589,19 +589,21 @@
   /* sc__partner */
   &__partner {
     z-index: 10;
-    height: 600px;
+    height: 750px;
     .sc__bg {
       img {
         margin-top: -5.5%;
       }
     }
     .inner {
-      padding: 160px 0;
+      padding: 140px 0;
       width: 1600px;
+      height: 100%;
       margin: 0 auto;
       display: flex;
+      justify-content: center;
       flex-direction: column;
-      gap: 64px;
+      gap: 70px;
     }
     .title__wrap {
       opacity: 0;
