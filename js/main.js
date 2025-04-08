@@ -1,208 +1,29 @@
 /**
- * @news_banner
- */
-$(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
-    loop: false,
-    center: true,
-    items: 3.6,
-    margin: 150,
-    dots: false,
-  });
-});
-
-/**
  * @GSAP
  */
-window.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+import {markers} from './markers.js';
 
-  const initialAnimation = gsap.timeline();
+const sections = gsap.utils.toArray('.sc__wrapper .section');
 
-  initialAnimation.from(".sc__ilho .ilhoFoundation", {
-    opacity: 0,
-    duration: 1,
-    yPercent: 30,
-    stagger: true,
-    ease: "power2.out",
-  });
-
-  // 스크롤 트리거 애니메이션들
-  const scrollAnimations = [
-    {
-      trigger: ".sc__start .sc__area-title > *",
-      start: "top 70%",
-      end: "bottom 20%",
-      yPercent: 100,
-      markerId: "startAnimation",
-    },
-    {
-      trigger: ".sc__business .sc__area-title",
-      start: "-150% 0%",
-      end: "-100% 0%",
-      yPercent: 100,
-      markerId: "businessAnimation",
-    },
-    // {
-    //     trigger: ".sc__backup .backup__item",
-    //     start: "-50% 50%",
-    //     end: "0% 0%",
-    //     yPercent: 100,
-    //     markerId: "backup-animation",
+sections.forEach((item, index) => {
+  ScrollTrigger.create({
+    trigger: item,
+    scroller: '.sc',
+    start: 'top top',
+    end: index === sections.length - 1 ? '+=25%' : '+=100%',
+    pin:true,
+    pinSpacing:false, 
+    // snap: {
+    //   // snapTo: true,
+    //   duration:0.3,
+    //   ease: "power1.inOut"
     // },
-    {
-      trigger: ".sc__news .sc__area > *",
-      start: "-50% 50%",
-      end: "100% 50%",
-      yPercent: 100,
-      markerId: "newsAnimation",
-    },
-    // {
-    //     trigger: ".sc__partner .inner > *",
-    //     start: "50% 50%",
-    //     end: "50% 100%",
-    //     yPercent: 100,
-    //     markerId: "partner-animation",
-    // },
-  ];
+    markers:true,
+  })
+})
 
-  scrollAnimations.forEach(({ trigger, start, end, yPercent, markerId }) => {
-    if (markerId === "businessAnimation") {
-      gsap.from(trigger, {
-        scrollTrigger: {
-          trigger,
-          start,
-          end,
-          scrub: 2,
-          toggleActions: "play none none reverse",
-          id: "businessAnimation", // 고유 ID 적용
-          markerStart: "Start businessAnimation",
-          markerEnd: "End businessAnimation",
-          markerSnapRatio: 0.5,
-        },
-        opacity: 0,
-        stagger: 0.2,
-        yPercent,
-        duration: 1.5,
-        ease: "power2.out",
-      });
-    } else {
-      // 다른 애니메이션들은 기존 방식대로 처리
-      gsap.from(trigger, {
-        scrollTrigger: {
-          trigger,
-          start,
-          end,
-          scrub: 2,
-          toggleActions: "play none none reverse",
-          id: markerId,
-          markerStart: "Start " + markerId,
-          markerEnd: "End " + markerId,
-          markerSnapRatio: 0.5,
-        },
-        opacity: 0,
-        stagger: 0.2,
-        yPercent,
-        duration: 1.5,
-        ease: "power2.out",
-      });
-    }
-  });
+// const wrapper = document.querySelector('.sc__wrapper')
+// wrapper.computedStyleMap.height = `${window.innerHeight + sections.length}px`;
 
-  // 슬라이드업 애니메이션
-  const slideUpElements = document.querySelectorAll('[data-js="slideup"]');
-  slideUpElements.forEach((element) => {
-    const trigger = ScrollTrigger.create({
-      trigger: element,
-      start: "top 60%",
-      end: "bottom 10%",
-      onEnter: () => toggleClass(element, true),
-      onLeaveBack: () => toggleClass(element, false),
-    });
-  });
+markers()
 
-  function toggleClass(element, add) {
-    if (add) {
-      if (!element.classList.contains("act")) {
-        element.classList.add("act");
-      }
-    } else {
-      if (element.classList.contains("act")) {
-        element.classList.remove("act");
-      }
-    }
-  }
-
-  function toggleClass(element, add) {
-    if (add) {
-      if (!element.classList.contains("act")) {
-        element.classList.add("act");
-      }
-    } else {
-      if (element.classList.contains("act")) {
-        element.classList.remove("act");
-      }
-    }
-  }
-  // 오브젝트 애니메이션 설정
-  const objects = document.querySelectorAll(".sc__start .obj");
-  const animations = [
-    { x: -200, y: 200 },
-    { x: 200, y: 200 },
-    { x: -200, y: 200 },
-    { x: -100, y: 200 },
-  ];
-
-  objects.forEach((obj, index) => {
-    const { x, y } = animations[index];
-
-    gsap.set(obj, {
-      opacity: 1,
-      x,
-      y,
-      force3D: true,
-    });
-
-    ScrollTrigger.create({
-      trigger: obj,
-      start: "0 90%",
-      end: "0 30%",
-      toggleActions: "play none none reverse",
-      onEnter: () => {
-        // 메인 애니메이션
-        gsap.to(obj, {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          duration: 0.8,
-          delay: index * 0.1,
-          ease: "power2.out",
-          onComplete: () => {
-            // 마지막 요소의 애니메이션이 완료된 후에만 데코 애니메이션 추가
-            if (index === objects.length - 1) {
-              objects.forEach((element, i) => {
-                element.classList.add("animate-deco");
-                element.classList.add(`obj-deco${(i % 4) + 1}`);
-              });
-            }
-          },
-        });
-      },
-      onLeaveBack: () => {
-        // 스크롤 되돌아갈 때
-        gsap.to(obj, {
-          opacity: 1,
-          x,
-          y,
-          duration: 0.8,
-          ease: "power2.in",
-          onComplete: () => {
-            // 데코 애니메이션 제거
-            obj.classList.remove("animate-deco");
-            obj.classList.remove("deco1", "deco2", "deco3", "deco4");
-          },
-        });
-      },
-    });
-  });
-});

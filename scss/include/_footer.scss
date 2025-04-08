@@ -3,8 +3,7 @@
   overflow: hidden;
   z-index: 10;
   padding: 0 24px;
-  background: url(../images/bg6.png) center no-repeat;
-  background-size: cover;
+  background: #fff;
   &::before {
     content: "";
     position: absolute;
@@ -86,7 +85,7 @@
           font-weight: 600;
           line-height: 24px;
           .ico-arrow {
-            background: url(../../images/ico-arrow.png) center no-repeat;
+            background: url(../../images/ico-arrow2.svg) center no-repeat;
             background-size: contain;
             width: 20px;
             height: 10px;
