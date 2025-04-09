@@ -10,7 +10,7 @@ sections.forEach((item, index) => {
     trigger: item,
     scroller: '.sc',
     start: 'top top',
-    end: index === sections.length - 1 ? '+=25%' : '+=100%',
+    end: index === sections.length - 1 ? '+=0%' : '+=100%',
     pin:true,
     pinSpacing:false, 
     // snap: {
@@ -18,7 +18,7 @@ sections.forEach((item, index) => {
     //   duration:0.3,
     //   ease: "power1.inOut"
     // },
-    markers:true,
+    // markers:true,
   })
 })
 
