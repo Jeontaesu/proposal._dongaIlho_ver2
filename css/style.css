@@ -2026,6 +2026,10 @@ img.pc-part {
   z-index: 10;
 }
 
+#visual img {
+  margin-top: 0;
+}
+
 .sc {
   width: 100vw;
   height: 100vh;
