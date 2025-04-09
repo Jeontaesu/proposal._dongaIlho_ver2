@@ -1855,16 +1855,7 @@ img.pc-part {
   margin: 0 auto;
   z-index: 100;
   transition: all 0.3s;
-}
-.header.--hide {
-  transform: translateY(-100%);
-}
-.header.--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
 }
 .header .header__inner {
   position: relative;
@@ -1876,11 +1867,11 @@ img.pc-part {
 .header .header__inner::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
   bottom: -30px;
-  width: 100%;
-  height: 3px;
+  transform: translateX(-50%);
+  width: 3000px;
+  height: 1px;
   background: #c6c6c6;
 }
 .header .gnb__list {

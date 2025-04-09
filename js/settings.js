@@ -45,19 +45,19 @@ ScrollTrigger.defaults({ scroller: container });
 
 
 // header 스크롤 효과
-scrollbar.addListener(function(status) {
-  const curr = status.offset.y;
+// scrollbar.addListener(function(status) {
+//   const curr = status.offset.y;
   
-  // Apply the same header logic using the scrollbar position
-  (curr > 0) ? $('header').addClass('--fixed') : $('header').removeClass('--fixed');
+//   // Apply the same header logic using the scrollbar position
+//   (curr > 0) ? $('header').addClass('--fixed') : $('header').removeClass('--fixed');
 
-  if (curr > lastScroll) { // 내릴때
-    $('.header').addClass('--hide');
-  } else {
-    $('.header').removeClass('--hide');
-  }
-  lastScroll = curr;
-});
+//   if (curr > lastScroll) { // 내릴때
+//     $('.header').addClass('--hide');
+//   } else {
+//     $('.header').removeClass('--hide');
+//   }
+//   lastScroll = curr;
+// });
 
 // Initialize lastScroll at the top of your script
 let lastScroll = 0;
