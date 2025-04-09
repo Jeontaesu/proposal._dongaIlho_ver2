@@ -1993,7 +1993,7 @@ img.pc-part {
   line-height: 24px;
 }
 .footer__inner .footer__link .footer__family .btn-family .ico-arrow {
-  background: url(../../images/ico-arrow2.svg) center no-repeat;
+  background: url(../images/ico-arrow2.svg) center no-repeat;
   background-size: contain;
   width: 20px;
   height: 10px;
