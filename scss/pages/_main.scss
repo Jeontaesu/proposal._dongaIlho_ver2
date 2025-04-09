@@ -13,25 +13,25 @@
     margin-top: -10vh;
     z-index: 10;
   }
-  > span {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 11;
-    > img {
-      max-width: none;
-    }
-    &.sec4_title {
-      top: 13%;
-    }
-    &.sec4_swipe {
-      top: 36%;
-      transform: translateX(-24%);
-    }
-    &.sec4_btn {
-      bottom: 15%;
-    }
-  }
+  // > span {
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   z-index: 11;
+  //   > img {
+  //     max-width: none;
+  //   }
+  //   &.sec4_title {
+  //     top: 13%;
+  //   }
+  //   &.sec4_swipe {
+  //     top: 36%;
+  //     transform: translateX(-24%);
+  //   }
+  //   &.sec4_btn {
+  //     bottom: 15%;
+  //   }
+  // }
 }
 #visual {
   img {
