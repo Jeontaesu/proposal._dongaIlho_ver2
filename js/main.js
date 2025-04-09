@@ -24,7 +24,6 @@ sections.forEach((item, index) => {
     //   duration:0.3,
     //   ease: "power1.inOut"
     // },
-    markers: true,
   });
 });
 
