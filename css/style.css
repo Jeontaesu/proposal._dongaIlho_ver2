@@ -2006,13 +2006,33 @@ img.pc-part {
 }
 
 .section {
+  position: relative;
   height: 100vh;
 }
-.section img {
+.section > img {
   position: relative;
   width: 100%;
   margin-top: -10vh;
   z-index: 10;
+}
+.section > span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+.section > span > img {
+  max-width: none;
+}
+.section > span.sec4_title {
+  top: 13%;
+}
+.section > span.sec4_swipe {
+  top: 36%;
+  transform: translateX(-24%);
+}
+.section > span.sec4_btn {
+  bottom: 15%;
 }
 
 #visual img {
