@@ -1921,6 +1921,7 @@ img.pc-part {
 
 .footer {
   position: relative;
+  bottom: -50px;
   overflow: hidden;
   z-index: 10;
   padding: 0 24px;
@@ -2020,6 +2021,7 @@ img.pc-part {
 }
 .section img {
   position: relative;
+  width: 100%;
   margin-top: -10vh;
   z-index: 10;
 }
