@@ -1912,24 +1912,22 @@ img.pc-part {
 
 .footer {
   position: relative;
-  bottom: -51px;
+  bottom: -7.5vh;
   overflow: hidden;
   z-index: 10;
-  padding: 0 24px;
   background: #fff;
 }
 .footer::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
+  left: 0;
+  right: 0;
   height: 3px;
   background: #c6c6c6;
 }
 .footer__inner {
-  padding: 52px 40px;
+  padding: 40px 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
