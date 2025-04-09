@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  bottom:-50px; //임시
+  bottom:-51px; //임시
   overflow: hidden;
   z-index: 10;
   padding: 0 24px;
@@ -16,7 +16,8 @@
     background: #c6c6c6;
   }
   &__inner {
-    padding: 40px;
+    // padding: 40px;
+    padding:52px 40px; //임시
     display: flex;
     justify-content: space-between;
     align-items: center;
