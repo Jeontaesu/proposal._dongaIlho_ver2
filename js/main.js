@@ -26,7 +26,6 @@ sections.forEach((item, index) => {
     //       "+=100%",
     pin: true,
     pinSpacing: false,
-    markers: true,
     ease: "power4.inOut",
     delay: 0.5,
     snap: {
