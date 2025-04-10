@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  bottom:-7.5vh; //임시
+  bottom: 0;
   overflow: hidden;
   z-index: 10;
   // padding: 0 24px;
@@ -9,9 +9,9 @@
     content: "";
     position: absolute;
     top: 0;
-    left:0;
-    right:0;
-    
+    left: 0;
+    right: 0;
+
     // left: 50%;
     // transform: translateX(-50%);
     // width: calc(100% - 48px);
@@ -20,7 +20,7 @@
   }
   &__inner {
     // padding: 40px;
-    padding:40px 64px;
+    padding: 30px 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@
         line-height: 20px;
       }
     }
-    .footer__wrap {
+    &__wrap {
       display: flex;
       gap: 177px;
     }

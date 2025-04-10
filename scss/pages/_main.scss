@@ -8,11 +8,18 @@
   position: relative;
   height: 100vh;
   > img {
+    margin-top: -10vh;
     position: relative;
     width: 100%;
-    margin-top: -10vh;
+    height: auto;
     z-index: 10;
+    object-fit: cover;
   }
+  // &:nth-child(4) {
+  //   > img {
+  //     margin-top: -5vh;
+  //   }
+  // }
   // > span {
   //   position: absolute;
   //   left: 50%;
@@ -38,41 +45,3 @@
     margin-top: 0;
   }
 }
-
-.sc {
-  width: 100vw;
-  height: 100vh;
-
-  &__wrapper {
-    // #visual {
-    //   background:url('../../images/visual.png')center no-repeat;
-    // }
-    // #section1 {
-    //   background:url('../../images/section1.png')center no-repeat;
-    // }
-    // #section2 {
-    //   background:url('../../images/section2.png')center no-repeat;
-    // }
-    // #section3 {
-    //   background:url('../../images/section3.png')center no-repeat;
-    // }
-  }
-}
-// #section4 {
-//   background:url('../../images/section4.png')center no-repeat;
-// }
-// #section5 {
-//   background:url('../../images/section5.png')center no-repeat;
-// }
-
-// #section4, #section5 {
-//   img{
-//     position: relative;
-//     margin-top:-5vh;
-//     z-index: 10;
-
-//   }
-// }
-// #section5 {
-//   height:105vh;
-// }

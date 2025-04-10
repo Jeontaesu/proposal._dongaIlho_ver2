@@ -1846,8 +1846,8 @@ img.pc-part {
 }
 
 .header {
-  padding: 30px 24px;
-  position: absolute;
+  padding: 20px 24px;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1857,22 +1857,28 @@ img.pc-part {
   transition: all 0.3s;
   background: #fff;
 }
-.header .header__inner {
+.header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: #c6c6c6;
+}
+.header__inner {
   position: relative;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .header__inner::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -30px;
-  transform: translateX(-50%);
-  width: 3000px;
-  height: 1px;
-  background: #c6c6c6;
+.header__logo {
+  height: 30px;
+}
+.header__logo img {
+  height: 100%;
 }
 .header .gnb__list {
   display: flex;
@@ -1885,12 +1891,12 @@ img.pc-part {
   font-weight: 700;
   line-height: 28px;
 }
-.header .header__right {
+.header__right {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.header .header__right .btn-spon {
+.header__right .btn-spon {
   padding: 0 24px;
   height: 40px;
   display: inline-flex;
@@ -1901,7 +1907,7 @@ img.pc-part {
   border-radius: 500px;
   background: #ef3b3d;
 }
-.header .header__right .btn-spon span::after {
+.header__right .btn-spon span::after {
   content: "";
   display: inline-block;
   margin-left: 7px;
@@ -1912,7 +1918,7 @@ img.pc-part {
 
 .footer {
   position: relative;
-  bottom: -7.5vh;
+  bottom: 0;
   overflow: hidden;
   z-index: 10;
   background: #fff;
@@ -1927,7 +1933,7 @@ img.pc-part {
   background: #c6c6c6;
 }
 .footer__inner {
-  padding: 40px 64px;
+  padding: 30px 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1939,7 +1945,7 @@ img.pc-part {
   font-weight: 400;
   line-height: 20px;
 }
-.footer__inner .footer__wrap {
+.footer__inner__wrap {
   display: flex;
   gap: 177px;
 }
@@ -2010,17 +2016,14 @@ img.pc-part {
   height: 100vh;
 }
 .section > img {
+  margin-top: -10vh;
   position: relative;
   width: 100%;
-  margin-top: -10vh;
+  height: auto;
   z-index: 10;
+  object-fit: cover;
 }
 
 #visual img {
   margin-top: 0;
-}
-
-.sc {
-  width: 100vw;
-  height: 100vh;
 }

@@ -1,33 +1,42 @@
 /**
  * @GSAP
  */
-import { markers } from "./markers.js";
+gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 const sections = gsap.utils.toArray(".sc__wrapper .section");
 
 sections.forEach((item, index) => {
   ScrollTrigger.create({
     trigger: item,
-    scroller: ".sc",
     start: "top top",
     end: index === sections.length - 1 ? "+=0%" : "+=100%",
     // end:
     //   index === sections.length - 1
     //     ? "+=0%"
-    //     : index === sections.length - 2
-    //     ? "+=80%" // 여기 원하는 값으로
-    //     : "+=100%",
+    //     : // : index === sections.length - 2
+    //       // ? "+=50%" // 여기 원하는 값으로
+    //       "+=100%",
     pin: true,
     pinSpacing: false,
-    // snap: {
-    //   // snapTo: true,
-    //   duration:0.3,
-    //   ease: "power1.inOut"
-    // },
+    markers: true,
+    ease: "power4.inOut",
+    delay: 0.5,
+    snap: {
+      snapTo: (value) => Math.round(value),
+      duration: 0.3,
+    },
+    // scrub: true,
   });
 });
 
+//
 // const wrapper = document.querySelector('.sc__wrapper')
 // wrapper.computedStyleMap.height = `${window.innerHeight + sections.length}px`;
-
-markers();
