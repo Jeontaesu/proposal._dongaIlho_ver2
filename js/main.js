@@ -2,6 +2,7 @@
  * @GSAP
  */
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 const lenis = new Lenis();
 
