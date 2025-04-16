@@ -1880,6 +1880,11 @@ img.pc-part {
 .header__logo img {
   height: 100%;
 }
+.header .gnb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .header .gnb__list {
   display: flex;
   align-items: center;

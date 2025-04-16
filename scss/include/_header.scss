@@ -44,6 +44,9 @@
     }
   }
   .gnb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     &__list {
       display: flex;
       align-items: center;
